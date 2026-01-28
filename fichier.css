@@ -1,0 +1,228 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    color: #1f2937;
+}
+
+.header {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    text-align: center;
+    padding: 45px;
+    color: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.titre {
+    background: rgba(255,255,255,0.18);
+    padding: 22px;
+    border-radius: 22px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+
+.photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 6px solid white;
+    margin-bottom: 18px;
+}
+
+.menu {
+    background: #020617;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu a {
+    color: #bae6fd;
+    padding: 16px 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #10b981, #059669); 
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-scroll-top:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 35px;
+}
+
+.top-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+}
+
+section, article, aside {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+aside#Debouches details {
+    background: #f8fafc;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+
+h2 {
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #2563eb;
+    margin-top: 20px;
+}
+
+#Projets-realises {
+    width: 100%;
+}
+
+.projets {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.projets th {
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+    color: white;
+    padding: 14px;
+}
+
+.projets td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.projets tr:hover {
+    background: #f0f9ff;
+}
+
+aside details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.qrcode {
+    position: relative; 
+    top: 0;
+    width: 160px;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    border-radius: 18px;
+    transition: all 0.3s ease;transition: all 0.3s ease;
+}
+.qrcode:hover {
+    top: -10px; 
+}
+
+footer {
+    background: #020617;
+    color: #a5f3fc;
+    text-align: center;
+    padding: 35px;
+    margin-top: 40px;
+}
+
+
+/* --- ADAPTATION TÉLÉPHONE (MEDIA QUERY) --- */
+@media screen and (max-width: 768px) {
+    .header { padding: 30px 15px; }
+    
+    .titre { font-size: 1.1rem; padding: 15px; }
+
+    .photo { width: 130px; height: 130px; }
+
+    .menu ul { flex-direction: column; }
+    
+    .menu a { text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    .top-layout { grid-template-columns: 1fr; gap: 20px; }
+
+    .main-container { padding: 15px; }
+
+    .actions { flex-direction: column; align-items: center; gap: 15px; }
+
+    /* Empêche le tableau de casser la mise en page */
+    article { overflow-x: auto; }
+    .projets { min-width: 500px; }
+
+    .btn-scroll-top {
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    footer pre {
+        font-size: 5px; /* Réduit l'ASCII art pour mobile */
+        line-height: 7px;
+    }
+}
